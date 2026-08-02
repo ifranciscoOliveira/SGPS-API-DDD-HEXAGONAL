@@ -2,15 +2,14 @@ package br.com.sgps.application.inscricao;
 
 
 import br.com.sgps.domain.entity.Candidato;
-import br.com.sgps.domain.entity.Inscricao;
-import br.com.sgps.domain.entity.Vaga;
-import br.com.sgps.domain.exception.VagaNaoEncontradaException;
+import br.com.sgps.vaga.domain.entity.Vaga;
+import br.com.sgps.vaga.domain.exception.VagaNaoEncontradaException;
 import br.com.sgps.domain.repository.CandidatoRepositoryDomain;
 import br.com.sgps.domain.repository.InscricaoRepositoryDomain;
 import br.com.sgps.domain.repository.VagaRepositoryDomain;
 import br.com.sgps.domain.service.InscricaoServiceDomain;
 import br.com.sgps.domain.valueobject.CandidatoId;
-import br.com.sgps.domain.valueobject.VagaId;
+import br.com.sgps.vaga.domain.valueobject.VagaId;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

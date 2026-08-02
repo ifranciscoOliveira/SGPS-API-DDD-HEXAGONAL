@@ -1,11 +1,11 @@
 package br.com.sgps.domain.repository;
 
 
-import br.com.sgps.domain.entity.Instituicao;
-import br.com.sgps.domain.entity.Vaga;
+import br.com.sgps.vaga.domain.entity.Instituicao;
+import br.com.sgps.vaga.domain.entity.Vaga;
 import br.com.sgps.domain.valueobject.Documento;
 import br.com.sgps.domain.valueobject.Email;
-import br.com.sgps.infrastructure.assembler.VagaPersistenceEntityAssembler;
+import br.com.sgps.vaga.infrastructure.assembler.VagaPersistenceEntityAssembler;
 import br.com.sgps.infrastructure.provider.InstituicaoPersistenceProvider;
 import br.com.sgps.infrastructure.provider.VagaPersistenceProvider;
 import org.junit.jupiter.api.BeforeEach;

@@ -4,16 +4,13 @@ import br.com.sgps.domain.commons.EtapasEnum;
 import br.com.sgps.domain.commons.ResultadoInscricaoEnum;
 import br.com.sgps.domain.exception.NegocioException;
 import br.com.sgps.domain.valueobject.CandidatoId;
-import br.com.sgps.domain.valueobject.VagaId;
+import br.com.sgps.vaga.domain.valueobject.VagaId;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
-import org.junit.jupiter.params.provider.ValueSource;
 
 import java.util.UUID;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class InscricaoTest {
 

@@ -1,10 +1,10 @@
 package br.com.sgps.domain.repository;
 
-import br.com.sgps.application.vaga.VagaFiltro;
-import br.com.sgps.domain.commons.Pagina;
-import br.com.sgps.domain.commons.Paginacao;
-import br.com.sgps.domain.entity.Vaga;
-import br.com.sgps.domain.valueobject.VagaId;
+import br.com.sgps.vaga.application.filter.VagaFiltro;
+import br.com.sgps.common.pagination.Pagina;
+import br.com.sgps.common.pagination.Paginacao;
+import br.com.sgps.vaga.domain.entity.Vaga;
+import br.com.sgps.vaga.domain.valueobject.VagaId;
 
 import java.util.List;
 import java.util.Optional;

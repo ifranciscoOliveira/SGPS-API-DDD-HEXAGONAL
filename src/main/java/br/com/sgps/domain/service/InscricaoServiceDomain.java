@@ -2,18 +2,12 @@ package br.com.sgps.domain.service;
 
 import br.com.sgps.domain.entity.Candidato;
 import br.com.sgps.domain.entity.Inscricao;
-import br.com.sgps.domain.entity.Vaga;
-import br.com.sgps.domain.exception.CandidatoNaoEncontratoException;
-import br.com.sgps.domain.exception.VagaNaoEncontradaException;
-import br.com.sgps.domain.repository.CandidatoRepositoryDomain;
-import br.com.sgps.domain.repository.InscricaoRepositoryDomain;
-import br.com.sgps.domain.repository.VagaRepositoryDomain;
+import br.com.sgps.vaga.domain.entity.Vaga;
 import br.com.sgps.domain.valueobject.CandidatoId;
-import br.com.sgps.domain.valueobject.VagaId;
+import br.com.sgps.vaga.domain.valueobject.VagaId;
 import lombok.RequiredArgsConstructor;
 
 import java.util.Objects;
-import java.util.UUID;
 
 @DomainService
 @RequiredArgsConstructor

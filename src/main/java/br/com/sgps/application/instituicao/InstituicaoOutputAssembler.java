@@ -1,9 +1,9 @@
 package br.com.sgps.application.instituicao;
 
-import br.com.sgps.domain.entity.Instituicao;
+import br.com.sgps.vaga.domain.entity.Instituicao;
 import br.com.sgps.domain.valueobject.Documento;
 import br.com.sgps.domain.valueobject.Email;
-import br.com.sgps.domain.valueobject.InstituicaoId;
+import br.com.sgps.vaga.domain.valueobject.InstituicaoId;
 import org.springframework.stereotype.Component;
 
 import java.util.UUID;

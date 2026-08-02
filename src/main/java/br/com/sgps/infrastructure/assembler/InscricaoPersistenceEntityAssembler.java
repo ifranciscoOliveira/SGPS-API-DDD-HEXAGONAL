@@ -3,7 +3,7 @@ package br.com.sgps.infrastructure.assembler;
 import br.com.sgps.domain.entity.Inscricao;
 import br.com.sgps.domain.valueobject.CandidatoId;
 import br.com.sgps.domain.valueobject.InscricaoId;
-import br.com.sgps.domain.valueobject.VagaId;
+import br.com.sgps.vaga.domain.valueobject.VagaId;
 import br.com.sgps.infrastructure.entity.CandidatoPersistenteEntity;
 import br.com.sgps.infrastructure.entity.InscricaoPersistenceEntity;
 import br.com.sgps.infrastructure.entity.VagaPersistenceEntity;

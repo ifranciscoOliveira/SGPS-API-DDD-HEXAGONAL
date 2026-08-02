@@ -1,8 +1,8 @@
 package br.com.sgps.apresentation.candidato;
 
 import br.com.sgps.application.candidato.*;
-import br.com.sgps.domain.commons.Pagina;
-import br.com.sgps.domain.commons.Paginacao;
+import br.com.sgps.common.pagination.Pagina;
+import br.com.sgps.common.pagination.Paginacao;
 import br.com.sgps.domain.entity.Candidato;
 import br.com.sgps.domain.valueobject.CandidatoId;
 import lombok.RequiredArgsConstructor;

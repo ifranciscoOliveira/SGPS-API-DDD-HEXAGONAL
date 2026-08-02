@@ -5,7 +5,7 @@ import br.com.sgps.domain.commons.ResultadoInscricaoEnum;
 import br.com.sgps.domain.exception.NegocioException;
 import br.com.sgps.domain.valueobject.CandidatoId;
 import br.com.sgps.domain.valueobject.InscricaoId;
-import br.com.sgps.domain.valueobject.VagaId;
+import br.com.sgps.vaga.domain.valueobject.VagaId;
 import lombok.Builder;
 
 import java.time.LocalDateTime;

@@ -1,18 +1,16 @@
 package br.com.sgps.application.instituicao;
 
-import br.com.sgps.domain.commons.Pagina;
-import br.com.sgps.domain.commons.Paginacao;
-import br.com.sgps.domain.entity.Instituicao;
-import br.com.sgps.domain.exception.InstituicaoNaoEncontradoException;
+import br.com.sgps.common.pagination.Pagina;
+import br.com.sgps.common.pagination.Paginacao;
+import br.com.sgps.vaga.domain.entity.Instituicao;
+import br.com.sgps.vaga.domain.exception.InstituicaoNaoEncontradoException;
 import br.com.sgps.domain.repository.InstituicaoRepositoryDomain;
-import br.com.sgps.domain.service.InstituicaoService;
+import br.com.sgps.vaga.domain.service.InstituicaoService;
 import br.com.sgps.domain.valueobject.Documento;
 import br.com.sgps.domain.valueobject.Email;
-import br.com.sgps.domain.valueobject.InstituicaoId;
+import br.com.sgps.vaga.domain.valueobject.InstituicaoId;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

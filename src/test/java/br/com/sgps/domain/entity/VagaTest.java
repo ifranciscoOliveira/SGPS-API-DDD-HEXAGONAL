@@ -1,10 +1,10 @@
 package br.com.sgps.domain.entity;
 
 import br.com.sgps.domain.exception.NegocioException;
-import br.com.sgps.domain.valueobject.InstituicaoId;
+import br.com.sgps.vaga.domain.valueobject.InstituicaoId;
+import br.com.sgps.vaga.domain.entity.Vaga;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
 
 import java.time.LocalDate;
 import java.util.UUID;

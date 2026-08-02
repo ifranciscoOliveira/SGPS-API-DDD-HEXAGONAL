@@ -1,15 +1,15 @@
 package br.com.sgps.infrastructure.provider;
 
-import br.com.sgps.application.vaga.VagaFiltro;
-import br.com.sgps.domain.commons.Pagina;
-import br.com.sgps.domain.commons.Paginacao;
-import br.com.sgps.domain.entity.Vaga;
+import br.com.sgps.vaga.application.filter.VagaFiltro;
+import br.com.sgps.common.pagination.Pagina;
+import br.com.sgps.common.pagination.Paginacao;
+import br.com.sgps.vaga.domain.entity.Vaga;
 import br.com.sgps.domain.repository.VagaRepositoryDomain;
-import br.com.sgps.domain.valueobject.VagaId;
-import br.com.sgps.infrastructure.assembler.VagaPersistenceEntityAssembler;
+import br.com.sgps.vaga.domain.valueobject.VagaId;
+import br.com.sgps.vaga.infrastructure.assembler.VagaPersistenceEntityAssembler;
 import br.com.sgps.infrastructure.entity.VagaPersistenceEntity;
-import br.com.sgps.infrastructure.repository.VagaPersistenceRepository;
-import br.com.sgps.infrastructure.specification.VagaSpecification;
+import br.com.sgps.vaga.infrastructure.persistence.VagaPersistenceRepository;
+import br.com.sgps.vaga.infrastructure.specification.VagaSpecification;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

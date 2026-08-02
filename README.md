@@ -18,45 +18,26 @@ O objetivo do projeto é mostrar uma evolução arquitetural real:
 
 1. **API Monolítica Tradicional**
 2. **API Abordagem Domain Driven Design (DDD)**
+3. **API Abordagem Domain Driven Design (DDD) com Ports & Adapters (Hexagonal Architecture)**
 
-Esse repositório representa a **Etapa 2**: API com abordagem Domain Driven Design (DDD).
+Esse repositório representa a **Etapa 3**: API com abordagem Domain Driven Design (DDD) e Ports & Adapters (Hexagonal Architecture).
 
 ---
 
-## 🧠 Arquitetura do Projeto (Etapa 2)
+## 🧠 Arquitetura do Projeto (Etapa 3)
 
-O projeto segue os princípios de **DDD (Domain Driven Design)** e **Clean Architecture**, separando responsabilidades em quatro camadas principais.
+O projeto segue os princípios de **DDD (Domain Driven Design)** e **Clean Architecture**, 
+este projeto é uma evolução do projeto SGPS-API-DDD, aplicando Ports & Adapters (Hexagonal Architecture), mantendo os conceitos de DDD.
 
-```
-        ┌───────────────────────┐
-        │      Presentation     │
-        │  Controllers / API    │
-        └───────────┬───────────┘
-                    │
-        ┌───────────▼───────────┐
-        │      Application      │
-        │  UseCases / Services  │
-        └───────────┬───────────┘
-                    │
-        ┌───────────▼───────────┐
-        │        Domain         │
-        │ Entities / Rules      │
-        └───────────▲───────────┘
-                    │
-        ┌───────────┴───────────┐
-        │     Infrastructure     │
-        │ DB / JPA / Framework   │
-        └────────────────────────┘
-```
 
-### Camadas
+### Estrutura
 
 - **Presentation** → Controllers e entrada da API
 - **Application** → Orquestra os casos de uso
 - **Domain** → Regras de negócio
 - **Infrastructure** → Implementações técnicas (JPA, banco, etc.)
 
-## 🚀 Tecnologias (Etapa 2)
+## 🚀 Tecnologias (Etapa 3)
 
 - **Java 21**
 - **Spring Boot 3.5.9**

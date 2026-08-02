@@ -1,6 +1,6 @@
 package br.com.sgps.application.instituicao;
 
-import br.com.sgps.domain.entity.Instituicao;
+import br.com.sgps.vaga.domain.entity.Instituicao;
 import lombok.*;
 
 @Getter

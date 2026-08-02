@@ -1,10 +1,10 @@
 package br.com.sgps.apresentation.instituicao;
 
 import br.com.sgps.application.instituicao.*;
-import br.com.sgps.domain.commons.Pagina;
-import br.com.sgps.domain.commons.Paginacao;
-import br.com.sgps.domain.entity.Instituicao;
-import br.com.sgps.domain.valueobject.InstituicaoId;
+import br.com.sgps.common.pagination.Pagina;
+import br.com.sgps.common.pagination.Paginacao;
+import br.com.sgps.vaga.domain.entity.Instituicao;
+import br.com.sgps.vaga.domain.valueobject.InstituicaoId;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
