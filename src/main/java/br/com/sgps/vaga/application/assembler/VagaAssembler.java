@@ -1,6 +1,5 @@
 package br.com.sgps.vaga.application.assembler;
 
-import br.com.sgps.application.vaga.VagaOutPutOld;
 import br.com.sgps.vaga.application.dto.VagaOutPut;
 import br.com.sgps.vaga.domain.entity.Vaga;
 import org.springframework.stereotype.Component;
