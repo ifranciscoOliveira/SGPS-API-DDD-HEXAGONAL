@@ -1,9 +1,11 @@
-package br.com.sgps.apresentation.instituicao;
+package br.com.sgps.vaga.controller;
 
-import br.com.sgps.application.instituicao.*;
-import br.com.sgps.common.pagination.Pagina;
-import br.com.sgps.common.pagination.Paginacao;
-import br.com.sgps.vaga.domain.entity.Instituicao;
+import br.com.sgps.shared.paginacao.Pagina;
+import br.com.sgps.shared.paginacao.Paginacao;
+import br.com.sgps.vaga.application.dto.InstituicaoInput;
+import br.com.sgps.vaga.application.dto.InstituicaoOutPut;
+import br.com.sgps.vaga.application.filter.InstituicaoFiltro;
+import br.com.sgps.vaga.application.port.in.instituicao.*;
 import br.com.sgps.vaga.domain.valueobject.InstituicaoId;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
@@ -17,15 +19,16 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class InstituicaoController {
 
-    private final InstituicaoManagementApplicationService instituicaoService;
-    private final InstituicaoOutputAssembler instituicaoAssembler;
+    private final CadastrarInstituicaoUseCase cadastrarInstituicaoUseCase;
+    private final AtualizarInstituicaoUseCase  atualizarInstituicaoUseCase;
+    private final ConsultarInstituicaoPorIdUseCase consultarInstituicaoPorIdUseCase;
+    private final ConsultarTodasInstituicaoUseCase consultarTodasInstituicaoUseCase;
+    private final ListarInstituicaoUseCase  listarInstituicaoUseCase;
+
 
     @GetMapping
     public List<InstituicaoOutPut> consultarTodos(){
-        return instituicaoService.consultarTodos()
-                .stream()
-                .map(instituicaoAssembler::toOutput)
-                .toList();
+        return consultarTodasInstituicaoUseCase.consultarTodos();
     }
 
     @GetMapping("/buscar")
@@ -40,27 +43,23 @@ public class InstituicaoController {
                         null
                 );
 
-        return instituicaoService.buscar(instituicaoFiltro, paginacao);
+        return listarInstituicaoUseCase.buscar(instituicaoFiltro, paginacao);
     }
 
     @PostMapping
     public InstituicaoOutPut salvar(@RequestBody InstituicaoInput instituicaoInput){
-        Instituicao instituicaoSalva =  instituicaoService.criar(instituicaoInput);
-
-        return  new InstituicaoOutPut(instituicaoSalva);
+        return  cadastrarInstituicaoUseCase.criar(instituicaoInput);
     }
 
     @PutMapping("/{idInstituicao}")
     public InstituicaoOutPut alterar(@RequestBody InstituicaoInput instituicaoInput, @PathVariable String idInstituicao){
 
-        return instituicaoAssembler.toOutput(instituicaoService.alterar(new InstituicaoId(UUID.fromString(idInstituicao)),instituicaoInput));
+        return atualizarInstituicaoUseCase.alterar(new InstituicaoId(UUID.fromString(idInstituicao)),instituicaoInput);
     }
 
     @GetMapping("/{idInstituicao}")
     public InstituicaoOutPut consultarPorId(@PathVariable String idInstituicao){
-        Instituicao instituicao = instituicaoService.conusltarPorID(new InstituicaoId(UUID.fromString(idInstituicao)));
-
-        return new InstituicaoOutPut(instituicao);
+        return consultarInstituicaoPorIdUseCase.conusltarPorID(new InstituicaoId(UUID.fromString(idInstituicao)));
     }
 
 

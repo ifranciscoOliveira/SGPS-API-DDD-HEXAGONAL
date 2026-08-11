@@ -3,8 +3,8 @@ package br.com.sgps.vaga.infrastructure.assembler;
 import br.com.sgps.vaga.domain.entity.Vaga;
 import br.com.sgps.vaga.domain.valueobject.InstituicaoId;
 import br.com.sgps.vaga.domain.valueobject.VagaId;
-import br.com.sgps.infrastructure.entity.InstituicaoPersistenceEntity;
-import br.com.sgps.infrastructure.entity.VagaPersistenceEntity;
+import br.com.sgps.vaga.infrastructure.entity.InstituicaoPersistenceEntity;
+import br.com.sgps.vaga.infrastructure.entity.VagaPersistenceEntity;
 import org.springframework.stereotype.Component;
 
 @Component

@@ -1,9 +1,9 @@
 package br.com.sgps.apresentation.instituicao;
 
-import br.com.sgps.application.instituicao.InstituicaoInput;
-import br.com.sgps.application.instituicao.InstituicaoOutPut;
-import br.com.sgps.application.instituicao.InstituicaoOutputAssembler;
-import br.com.sgps.application.instituicao.InstituicaoManagementApplicationService;
+import br.com.sgps.vaga.application.dto.InstituicaoInput;
+import br.com.sgps.vaga.application.dto.InstituicaoOutPut;
+import br.com.sgps.vaga.application.assembler.InstituicaoOutputAssembler;
+import br.com.sgps.vaga.controller.InstituicaoController;
 import br.com.sgps.vaga.domain.entity.Instituicao;
 import br.com.sgps.domain.valueobject.Documento;
 import br.com.sgps.domain.valueobject.Email;

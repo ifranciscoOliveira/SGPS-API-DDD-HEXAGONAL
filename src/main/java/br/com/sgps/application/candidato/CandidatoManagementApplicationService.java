@@ -1,7 +1,7 @@
 package br.com.sgps.application.candidato;
 
-import br.com.sgps.common.pagination.Pagina;
-import br.com.sgps.common.pagination.Paginacao;
+import br.com.sgps.shared.paginacao.Pagina;
+import br.com.sgps.shared.paginacao.Paginacao;
 import br.com.sgps.domain.entity.Candidato;
 import br.com.sgps.domain.exception.CandidatoNaoEncontratoException;
 import br.com.sgps.domain.exception.EmailEmUsoException;

@@ -1,4 +1,4 @@
-package br.com.sgps.common.pagination;
+package br.com.sgps.shared.paginacao;
 
 public enum DirecaoOrdenacao {
     ASC,

@@ -1,11 +1,11 @@
 package br.com.sgps.vaga.domain.service;
 
-import br.com.sgps.domain.service.DomainService;
+import br.com.sgps.shared.domain.annotation.DomainService;
+import br.com.sgps.vaga.application.port.out.InstituicaoRepositoryPort;
 import br.com.sgps.vaga.domain.entity.Instituicao;
 import br.com.sgps.domain.exception.DocumentoEmUsoException;
 import br.com.sgps.domain.exception.EmailEmUsoException;
 import br.com.sgps.vaga.domain.exception.InstituicaoNaoEncontradoException;
-import br.com.sgps.domain.repository.InstituicaoRepositoryDomain;
 import br.com.sgps.domain.valueobject.Documento;
 import br.com.sgps.domain.valueobject.Email;
 import br.com.sgps.vaga.domain.valueobject.InstituicaoId;
@@ -13,9 +13,9 @@ import lombok.RequiredArgsConstructor;
 
 @DomainService
 @RequiredArgsConstructor
-public class InstituicaoService {
+public class InstituicaoServiceDomain {
 
-    private final InstituicaoRepositoryDomain instituicaoRepositoryDomain;
+    private final InstituicaoRepositoryPort instituicaoRepositoryPort;
 
     public Instituicao salvar(String nome, Documento cnpjCpf,
                               String telefone, Email email){
@@ -23,6 +23,7 @@ public class InstituicaoService {
         Instituicao instituicao = Instituicao.criarNovaInstituicao(nome,cnpjCpf,telefone,email);
 
         validarDocumentoEmailEmUso(instituicao);
+        instituicaoRepositoryPort.persistir(instituicao);
         return instituicao;
 
     }
@@ -30,7 +31,7 @@ public class InstituicaoService {
     public Instituicao alterar(InstituicaoId id, String nome, Documento cpfCnpj,
                                String telefone, Email email){
 
-        Instituicao instituicao = instituicaoRepositoryDomain.conusltarPorId(id).orElseThrow(InstituicaoNaoEncontradoException::new);
+        Instituicao instituicao = instituicaoRepositoryPort.consultarPorId(id).orElseThrow(InstituicaoNaoEncontradoException::new);
 
         validarDocumentoEmailEmUso(instituicao);
         return instituicao;
@@ -38,10 +39,10 @@ public class InstituicaoService {
     }
 
     private void validarDocumentoEmailEmUso(Instituicao instituicao) {
-        if(instituicaoRepositoryDomain.exiteDocumentoCadastrado(instituicao.cnpjCpf(), instituicao.id())){
+        if(instituicaoRepositoryPort.existeDocumentoCadastrado(instituicao.cnpjCpf(), instituicao.id())){
             throw new DocumentoEmUsoException("Já existe uma instituição com o CNPJ/CPF informado.");
         }
-        if(instituicaoRepositoryDomain.existeEmailCadastrado(instituicao.email(), instituicao.id())){
+        if(instituicaoRepositoryPort.existeEmailCadastrado(instituicao.email(), instituicao.id())){
             throw new EmailEmUsoException("Já existe email cadastro.");
         }
     }

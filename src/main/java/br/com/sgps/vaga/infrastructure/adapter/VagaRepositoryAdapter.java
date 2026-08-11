@@ -1,9 +1,9 @@
 package br.com.sgps.vaga.infrastructure.adapter;
 
 import br.com.sgps.vaga.application.filter.VagaFiltro;
-import br.com.sgps.common.pagination.Pagina;
-import br.com.sgps.common.pagination.Paginacao;
-import br.com.sgps.infrastructure.entity.VagaPersistenceEntity;
+import br.com.sgps.shared.paginacao.Pagina;
+import br.com.sgps.shared.paginacao.Paginacao;
+import br.com.sgps.vaga.infrastructure.entity.VagaPersistenceEntity;
 import br.com.sgps.vaga.infrastructure.specification.VagaSpecification;
 import br.com.sgps.vaga.application.port.out.VagaRepositoryPort;
 import br.com.sgps.vaga.domain.entity.Vaga;

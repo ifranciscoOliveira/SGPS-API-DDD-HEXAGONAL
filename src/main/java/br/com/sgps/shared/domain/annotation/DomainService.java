@@ -1,4 +1,4 @@
-package br.com.sgps.domain.service;
+package br.com.sgps.shared.domain.annotation;
 
 
 import java.lang.annotation.*;

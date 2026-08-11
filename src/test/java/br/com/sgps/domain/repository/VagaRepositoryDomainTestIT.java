@@ -6,8 +6,6 @@ import br.com.sgps.vaga.domain.entity.Vaga;
 import br.com.sgps.domain.valueobject.Documento;
 import br.com.sgps.domain.valueobject.Email;
 import br.com.sgps.vaga.infrastructure.assembler.VagaPersistenceEntityAssembler;
-import br.com.sgps.infrastructure.provider.InstituicaoPersistenceProvider;
-import br.com.sgps.infrastructure.provider.VagaPersistenceProvider;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

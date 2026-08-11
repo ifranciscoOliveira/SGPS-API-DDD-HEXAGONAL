@@ -1,4 +1,4 @@
-package br.com.sgps.application.instituicao;
+package br.com.sgps.vaga.application.dto;
 
 import br.com.sgps.vaga.domain.entity.Instituicao;
 import lombok.*;

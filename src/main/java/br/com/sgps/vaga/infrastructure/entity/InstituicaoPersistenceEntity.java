@@ -1,4 +1,4 @@
-package br.com.sgps.infrastructure.entity;
+package br.com.sgps.vaga.infrastructure.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

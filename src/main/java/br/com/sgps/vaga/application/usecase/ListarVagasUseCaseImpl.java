@@ -1,8 +1,8 @@
 package br.com.sgps.vaga.application.usecase;
 
 import br.com.sgps.vaga.application.filter.VagaFiltro;
-import br.com.sgps.common.pagination.Pagina;
-import br.com.sgps.common.pagination.Paginacao;
+import br.com.sgps.shared.paginacao.Pagina;
+import br.com.sgps.shared.paginacao.Paginacao;
 import br.com.sgps.vaga.application.assembler.VagaAssembler;
 import br.com.sgps.vaga.application.dto.VagaOutPut;
 import br.com.sgps.vaga.application.port.in.ListarVagasUseCase;

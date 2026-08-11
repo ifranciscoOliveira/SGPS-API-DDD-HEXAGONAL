@@ -6,7 +6,7 @@ import br.com.sgps.domain.valueobject.InscricaoId;
 import br.com.sgps.vaga.domain.valueobject.VagaId;
 import br.com.sgps.infrastructure.entity.CandidatoPersistenteEntity;
 import br.com.sgps.infrastructure.entity.InscricaoPersistenceEntity;
-import br.com.sgps.infrastructure.entity.VagaPersistenceEntity;
+import br.com.sgps.vaga.infrastructure.entity.VagaPersistenceEntity;
 import org.springframework.stereotype.Component;
 
 @Component

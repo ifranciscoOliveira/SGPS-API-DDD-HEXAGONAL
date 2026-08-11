@@ -1,7 +1,7 @@
 package br.com.sgps.vaga.infrastructure.specification;
 
-import br.com.sgps.application.instituicao.InstituicaoFiltro;
-import br.com.sgps.infrastructure.entity.InstituicaoPersistenceEntity;
+import br.com.sgps.vaga.application.filter.InstituicaoFiltro;
+import br.com.sgps.vaga.infrastructure.entity.InstituicaoPersistenceEntity;
 import jakarta.persistence.criteria.Predicate;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.jpa.domain.Specification;

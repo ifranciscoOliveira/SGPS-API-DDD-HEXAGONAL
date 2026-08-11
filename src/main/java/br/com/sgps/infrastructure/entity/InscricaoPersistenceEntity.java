@@ -2,6 +2,7 @@ package br.com.sgps.infrastructure.entity;
 
 import br.com.sgps.domain.commons.EtapasEnum;
 import br.com.sgps.domain.commons.ResultadoInscricaoEnum;
+import br.com.sgps.vaga.infrastructure.entity.VagaPersistenceEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -9,6 +9,7 @@ import br.com.sgps.domain.repository.CandidatoRepositoryDomain;
 import br.com.sgps.domain.valueobject.CandidatoId;
 import br.com.sgps.domain.valueobject.Documento;
 import br.com.sgps.domain.valueobject.Email;
+import br.com.sgps.shared.domain.annotation.DomainService;
 import lombok.RequiredArgsConstructor;
 
 import java.time.LocalDate;

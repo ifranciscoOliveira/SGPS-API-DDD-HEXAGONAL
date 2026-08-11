@@ -14,8 +14,6 @@ import br.com.sgps.vaga.infrastructure.assembler.InstituicaoPersistenceEntityAss
 import br.com.sgps.vaga.infrastructure.assembler.VagaPersistenceEntityAssembler;
 import br.com.sgps.infrastructure.provider.CandidatoPersistenceProvider;
 import br.com.sgps.infrastructure.provider.InscricaoPersistenceProvider;
-import br.com.sgps.infrastructure.provider.InstituicaoPersistenceProvider;
-import br.com.sgps.infrastructure.provider.VagaPersistenceProvider;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,9 +29,7 @@ import java.util.UUID;
         InscricaoPersistenceEntityAssembler.class,
         CandidatoPersistenceProvider.class,
         CandidatoPersistenceEntityAssembler.class,
-        VagaPersistenceProvider.class,
         VagaPersistenceEntityAssembler.class,
-        InstituicaoPersistenceProvider.class,
         InstituicaoPersistenceEntityAssembler.class
 })
 class InscricaoRepositoryDomainTestIT {

@@ -4,7 +4,7 @@ import br.com.sgps.vaga.domain.entity.Instituicao;
 import br.com.sgps.domain.valueobject.Documento;
 import br.com.sgps.domain.valueobject.Email;
 import br.com.sgps.vaga.domain.valueobject.InstituicaoId;
-import br.com.sgps.infrastructure.entity.InstituicaoPersistenceEntity;
+import br.com.sgps.vaga.infrastructure.entity.InstituicaoPersistenceEntity;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;

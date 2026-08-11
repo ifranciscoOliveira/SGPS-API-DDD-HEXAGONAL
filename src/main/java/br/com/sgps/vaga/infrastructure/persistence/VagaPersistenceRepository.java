@@ -1,6 +1,6 @@
 package br.com.sgps.vaga.infrastructure.persistence;
 
-import br.com.sgps.infrastructure.entity.VagaPersistenceEntity;
+import br.com.sgps.vaga.infrastructure.entity.VagaPersistenceEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;
