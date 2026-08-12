@@ -1,6 +1,5 @@
 package br.com.sgps.vaga.application.usecase;
 
-import br.com.sgps.domain.repository.VagaRepositoryDomain;
 import br.com.sgps.vaga.application.dto.VagaInput;
 import br.com.sgps.vaga.application.dto.VagaOutPut;
 import br.com.sgps.vaga.application.port.in.AtualizarVagaUseCase;

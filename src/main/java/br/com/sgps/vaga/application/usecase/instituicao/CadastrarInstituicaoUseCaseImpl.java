@@ -5,7 +5,9 @@ import br.com.sgps.domain.valueobject.Email;
 import br.com.sgps.vaga.application.dto.InstituicaoInput;
 import br.com.sgps.vaga.application.dto.InstituicaoOutPut;
 import br.com.sgps.vaga.application.port.in.instituicao.CadastrarInstituicaoUseCase;
+import br.com.sgps.vaga.application.port.out.InstituicaoRepositoryPort;
 import br.com.sgps.vaga.domain.service.InstituicaoServiceDomain;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 import java.util.Objects;
@@ -14,12 +16,15 @@ import java.util.Objects;
 public class CadastrarInstituicaoUseCaseImpl implements CadastrarInstituicaoUseCase {
 
     private final InstituicaoServiceDomain instituicaoServiceDomain;
+    private final InstituicaoRepositoryPort instituicaoRepositoryPort;
 
-    public CadastrarInstituicaoUseCaseImpl(InstituicaoServiceDomain instituicaoServiceDomain) {
+    public CadastrarInstituicaoUseCaseImpl(InstituicaoServiceDomain instituicaoServiceDomain, InstituicaoRepositoryPort instituicaoRepositoryPort) {
         this.instituicaoServiceDomain = instituicaoServiceDomain;
+        this.instituicaoRepositoryPort = instituicaoRepositoryPort;
     }
 
     @Override
+    @Transactional
     public InstituicaoOutPut criar(InstituicaoInput instituicaoInput) {
         Objects.requireNonNull(instituicaoInput);
 
@@ -27,6 +32,8 @@ public class CadastrarInstituicaoUseCaseImpl implements CadastrarInstituicaoUseC
                 new Documento(instituicaoInput.getCnpjCpf()),
                 instituicaoInput.getTelefone(),
                 new Email(instituicaoInput.getEmail()));
+
+        instituicaoRepositoryPort.persistir(instituicao);
 
         return new InstituicaoOutPut(instituicao);
     }

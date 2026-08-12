@@ -18,18 +18,15 @@ import java.util.Objects;
 public class CadastrarVagaUseCaseImpl implements CadastrarVagaUseCase {
 
     private final VagaServiceDomain vagaServiceDomain;
-    private final InstituicaoRepositoryPort instituicaoRepositoryPort;
 
 
-    public CadastrarVagaUseCaseImpl(VagaServiceDomain vagaServiceDomain, InstituicaoRepositoryPort instituicaoRepositoryPort) {
+    public CadastrarVagaUseCaseImpl(VagaServiceDomain vagaServiceDomain) {
         this.vagaServiceDomain = vagaServiceDomain;
-        this.instituicaoRepositoryPort = instituicaoRepositoryPort;
     }
 
     @Override
     @Transactional
     public VagaOutPut cadastrar(VagaInput vagaInput) {
-        existeInstituicao(new InstituicaoId(vagaInput.instituicaoId()));
         var vaga = vagaServiceDomain.salvar(vagaInput.titulo(),
                 vagaInput.descricao(),
                 vagaInput.dataInicio(),
@@ -42,10 +39,5 @@ public class CadastrarVagaUseCaseImpl implements CadastrarVagaUseCase {
         return VagaOutPut.from(vaga);
     }
 
-    private void existeInstituicao(InstituicaoId instituicaoId){
-        Objects.requireNonNull(instituicaoId);
-        if(!instituicaoRepositoryPort.existe(instituicaoId)){
-            throw new NegocioException("Instituição não encontrada com o ID: " + instituicaoId);
-        }
-    }
+
 }

@@ -23,7 +23,6 @@ public class InstituicaoServiceDomain {
         Instituicao instituicao = Instituicao.criarNovaInstituicao(nome,cnpjCpf,telefone,email);
 
         validarDocumentoEmailEmUso(instituicao);
-        instituicaoRepositoryPort.persistir(instituicao);
         return instituicao;
 
     }
@@ -32,7 +31,9 @@ public class InstituicaoServiceDomain {
                                String telefone, Email email){
 
         Instituicao instituicao = instituicaoRepositoryPort.consultarPorId(id).orElseThrow(InstituicaoNaoEncontradoException::new);
-
+        instituicao.alterarNome(nome);
+        instituicao.alterarTelefone(telefone);
+        instituicao.alterarEmail(email);
         validarDocumentoEmailEmUso(instituicao);
         return instituicao;
 

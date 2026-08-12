@@ -18,11 +18,14 @@ import java.util.Objects;
 public class VagaServiceDomain {
 
     private final VagaRepositoryPort vagaRepositoryPort;
+    private final InstituicaoRepositoryPort instituicaoRepositoryPort;
+
 
     public Vaga salvar(String titulo, String descricao, LocalDate dataInicio,
                        LocalDate dataFim,Integer limiteInscricoes, String status, String observacao,
                        InstituicaoId instituicaoId){
 
+        existeInstituicao(instituicaoId);
         Vaga vaga = Vaga.criarNovaVaga(titulo, descricao, dataInicio,
                 dataFim,limiteInscricoes , status, observacao, instituicaoId);
         validarTituloEmUso(vaga.id(),titulo);
@@ -44,7 +47,6 @@ public class VagaServiceDomain {
         vaga.alterarLimiteInscricoes(limiteInscricoes);
         vaga.alterarDescricao(descricao);
         vaga.alterarInstituicaoId(instituicaoId);
-        vagaRepositoryPort.persistir(vaga);
         return vaga;
     }
 
@@ -54,6 +56,11 @@ public class VagaServiceDomain {
             throw new NegocioException("Já existe uma vaga com o título informado.");
         }
     }
-
+    private void existeInstituicao(InstituicaoId instituicaoId){
+        Objects.requireNonNull(instituicaoId);
+        if(!instituicaoRepositoryPort.existe(instituicaoId)){
+            throw new NegocioException("Instituição não encontrada com o ID: " + instituicaoId);
+        }
+    }
 
 }
