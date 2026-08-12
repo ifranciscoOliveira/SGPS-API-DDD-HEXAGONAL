@@ -1,10 +1,14 @@
 package br.com.sgps.apresentation.candidato;
 
 import br.com.sgps.application.candidato.*;
+import br.com.sgps.candidato.application.dto.CandidatoInput;
+import br.com.sgps.candidato.application.dto.CandidatoAlterarInput;
+import br.com.sgps.candidato.application.dto.CandidatoFiltro;
+import br.com.sgps.candidato.application.dto.CandidatoOutPut;
 import br.com.sgps.shared.paginacao.Pagina;
 import br.com.sgps.shared.paginacao.Paginacao;
-import br.com.sgps.domain.entity.Candidato;
-import br.com.sgps.domain.valueobject.CandidatoId;
+import br.com.sgps.candidato.domain.entity.Candidato;
+import br.com.sgps.candidato.domain.valueobject.CandidatoId;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
@@ -55,7 +59,7 @@ public class CandidatoController {
     }
 
     @PostMapping
-    public CandidatoOutPut cadastrarCandidato(@RequestBody CandidateInput input) {
+    public CandidatoOutPut cadastrarCandidato(@RequestBody CandidatoInput input) {
         Candidato candidatoSalvo = candidatoManagementApplicationService.criar(input);
         return CandidatoOutPut.fromDomain(candidatoSalvo);
 

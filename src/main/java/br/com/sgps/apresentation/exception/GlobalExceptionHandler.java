@@ -1,6 +1,6 @@
 package br.com.sgps.apresentation.exception;
 
-import br.com.sgps.domain.exception.CandidatoNaoEncontratoException;
+import br.com.sgps.candidato.domain.exception.CandidatoNaoEncontratoException;
 import br.com.sgps.domain.exception.DocumentoEmUsoException;
 import br.com.sgps.domain.exception.EmailEmUsoException;
 import br.com.sgps.vaga.domain.exception.InstituicaoNaoEncontradoException;

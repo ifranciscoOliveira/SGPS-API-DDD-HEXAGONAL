@@ -1,5 +1,6 @@
 package br.com.sgps.infrastructure.entity;
 
+import br.com.sgps.candidato.infrastructure.entity.CandidatoPersistenteEntity;
 import br.com.sgps.domain.commons.EtapasEnum;
 import br.com.sgps.domain.commons.ResultadoInscricaoEnum;
 import br.com.sgps.vaga.infrastructure.entity.VagaPersistenceEntity;

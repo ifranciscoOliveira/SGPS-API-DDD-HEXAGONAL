@@ -1,4 +1,4 @@
-package br.com.sgps.infrastructure.entity;
+package br.com.sgps.candidato.infrastructure.entity;
 
 import jakarta.persistence.*;
 import lombok.*;

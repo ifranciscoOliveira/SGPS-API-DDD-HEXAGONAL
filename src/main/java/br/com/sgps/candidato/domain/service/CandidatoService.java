@@ -1,12 +1,12 @@
-package br.com.sgps.domain.service;
+package br.com.sgps.candidato.domain.service;
 
-import br.com.sgps.domain.entity.Candidato;
-import br.com.sgps.domain.exception.CandidatoNaoEncontratoException;
+import br.com.sgps.candidato.domain.entity.Candidato;
+import br.com.sgps.candidato.domain.exception.CandidatoNaoEncontratoException;
 import br.com.sgps.domain.exception.DocumentoEmUsoException;
 import br.com.sgps.domain.exception.EmailEmUsoException;
 import br.com.sgps.domain.exception.NegocioException;
 import br.com.sgps.domain.repository.CandidatoRepositoryDomain;
-import br.com.sgps.domain.valueobject.CandidatoId;
+import br.com.sgps.candidato.domain.valueobject.CandidatoId;
 import br.com.sgps.domain.valueobject.Documento;
 import br.com.sgps.domain.valueobject.Email;
 import br.com.sgps.shared.domain.annotation.DomainService;

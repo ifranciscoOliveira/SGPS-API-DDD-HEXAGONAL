@@ -1,8 +1,7 @@
-package br.com.sgps.application.candidato;
+package br.com.sgps.candidato.application.dto;
 
-import br.com.sgps.domain.entity.Candidato;
+import br.com.sgps.candidato.domain.entity.Candidato;
 import lombok.Builder;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 

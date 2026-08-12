@@ -1,6 +1,6 @@
-package br.com.sgps.infrastructure.repository;
+package br.com.sgps.candidato.infrastructure.persistence;
 
-import br.com.sgps.infrastructure.entity.CandidatoPersistenteEntity;
+import br.com.sgps.candidato.infrastructure.entity.CandidatoPersistenteEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.jpa.repository.Query;

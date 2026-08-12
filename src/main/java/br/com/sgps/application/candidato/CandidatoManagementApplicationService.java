@@ -1,13 +1,16 @@
 package br.com.sgps.application.candidato;
 
+import br.com.sgps.candidato.application.dto.CandidatoInput;
+import br.com.sgps.candidato.application.dto.CandidatoAlterarInput;
+import br.com.sgps.candidato.application.dto.CandidatoFiltro;
 import br.com.sgps.shared.paginacao.Pagina;
 import br.com.sgps.shared.paginacao.Paginacao;
-import br.com.sgps.domain.entity.Candidato;
-import br.com.sgps.domain.exception.CandidatoNaoEncontratoException;
+import br.com.sgps.candidato.domain.entity.Candidato;
+import br.com.sgps.candidato.domain.exception.CandidatoNaoEncontratoException;
 import br.com.sgps.domain.exception.EmailEmUsoException;
 import br.com.sgps.domain.repository.CandidatoRepositoryDomain;
-import br.com.sgps.domain.service.CandidatoService;
-import br.com.sgps.domain.valueobject.CandidatoId;
+import br.com.sgps.candidato.domain.service.CandidatoService;
+import br.com.sgps.candidato.domain.valueobject.CandidatoId;
 import br.com.sgps.domain.valueobject.Documento;
 import br.com.sgps.domain.valueobject.Email;
 import lombok.RequiredArgsConstructor;
@@ -25,7 +28,7 @@ public class CandidatoManagementApplicationService {
     private final CandidatoRepositoryDomain candidatoRepositoryDomain;
 
     @Transactional
-    public Candidato criar(CandidateInput candidatoInput) throws EmailEmUsoException {
+    public Candidato criar(CandidatoInput candidatoInput) throws EmailEmUsoException {
         Objects.requireNonNull(candidatoInput);
 
         Candidato candidato = candidatoServiceDomain.salvar(new Documento(candidatoInput.getCpf()),
@@ -37,7 +40,7 @@ public class CandidatoManagementApplicationService {
     }
 
     @Transactional
-    public Candidato alterar(CandidatoId id,CandidatoAlterarInput candidatoAlterarInput ){
+    public Candidato alterar(CandidatoId id, CandidatoAlterarInput candidatoAlterarInput ){
 
         Objects.requireNonNull(id);
         Objects.requireNonNull(candidatoAlterarInput);

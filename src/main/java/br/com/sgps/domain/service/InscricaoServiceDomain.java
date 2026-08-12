@@ -1,10 +1,10 @@
 package br.com.sgps.domain.service;
 
-import br.com.sgps.domain.entity.Candidato;
+import br.com.sgps.candidato.domain.entity.Candidato;
 import br.com.sgps.domain.entity.Inscricao;
 import br.com.sgps.shared.domain.annotation.DomainService;
 import br.com.sgps.vaga.domain.entity.Vaga;
-import br.com.sgps.domain.valueobject.CandidatoId;
+import br.com.sgps.candidato.domain.valueobject.CandidatoId;
 import br.com.sgps.vaga.domain.valueobject.VagaId;
 import lombok.RequiredArgsConstructor;
 

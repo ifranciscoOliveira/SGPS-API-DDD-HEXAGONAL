@@ -1,4 +1,4 @@
-package br.com.sgps.application.candidato;
+package br.com.sgps.candidato.application.dto;
 
 public record CandidatoFiltro( String nome, String cpf, String email) {
 }

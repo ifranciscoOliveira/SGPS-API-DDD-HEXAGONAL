@@ -1,6 +1,4 @@
-package br.com.sgps.domain.valueobject;
-
-import br.com.sgps.domain.entity.Candidato;
+package br.com.sgps.candidato.domain.valueobject;
 
 import java.util.Objects;
 import java.util.UUID;

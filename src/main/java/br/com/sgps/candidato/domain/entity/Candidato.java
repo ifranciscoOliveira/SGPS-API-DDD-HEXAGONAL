@@ -1,7 +1,7 @@
-package br.com.sgps.domain.entity;
+package br.com.sgps.candidato.domain.entity;
 
 import br.com.sgps.domain.exception.NegocioException;
-import br.com.sgps.domain.valueobject.CandidatoId;
+import br.com.sgps.candidato.domain.valueobject.CandidatoId;
 import br.com.sgps.domain.valueobject.Documento;
 import br.com.sgps.domain.valueobject.Email;
 import lombok.Builder;

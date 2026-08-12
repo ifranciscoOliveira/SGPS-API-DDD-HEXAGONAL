@@ -1,4 +1,4 @@
-package br.com.sgps.application.candidato;
+package br.com.sgps.candidato.application.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;

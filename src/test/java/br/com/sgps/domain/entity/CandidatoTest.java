@@ -1,6 +1,7 @@
 package br.com.sgps.domain.entity;
 
 
+import br.com.sgps.candidato.domain.entity.Candidato;
 import br.com.sgps.domain.exception.NegocioException;
 import br.com.sgps.domain.valueobject.Documento;
 import br.com.sgps.domain.valueobject.Email;

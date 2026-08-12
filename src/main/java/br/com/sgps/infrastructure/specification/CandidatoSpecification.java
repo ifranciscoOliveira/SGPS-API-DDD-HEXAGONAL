@@ -1,8 +1,7 @@
 package br.com.sgps.infrastructure.specification;
 
-import br.com.sgps.application.candidato.CandidatoFiltro;
-import br.com.sgps.domain.entity.Candidato;
-import br.com.sgps.infrastructure.entity.CandidatoPersistenteEntity;
+import br.com.sgps.candidato.application.dto.CandidatoFiltro;
+import br.com.sgps.candidato.infrastructure.entity.CandidatoPersistenteEntity;
 import jakarta.persistence.criteria.Predicate;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.jpa.domain.Specification;

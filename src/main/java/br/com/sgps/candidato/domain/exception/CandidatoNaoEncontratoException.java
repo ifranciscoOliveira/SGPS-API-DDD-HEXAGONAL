@@ -1,4 +1,4 @@
-package br.com.sgps.domain.exception;
+package br.com.sgps.candidato.domain.exception;
 
 public class CandidatoNaoEncontratoException extends RuntimeException {
 

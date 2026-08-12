@@ -1,31 +1,29 @@
-package br.com.sgps.infrastructure.provider;
+package br.com.sgps.candidato.infrastructure.adapter;
 
 import br.com.sgps.candidato.application.dto.CandidatoFiltro;
-import br.com.sgps.shared.paginacao.Pagina;
-import br.com.sgps.shared.paginacao.Paginacao;
+import br.com.sgps.candidato.application.port.out.CandidatoRepositoryPort;
 import br.com.sgps.candidato.domain.entity.Candidato;
-import br.com.sgps.domain.repository.CandidatoRepositoryDomain;
 import br.com.sgps.candidato.domain.valueobject.CandidatoId;
-import br.com.sgps.domain.valueobject.Email;
-import br.com.sgps.candidato.infrastructure.assembler.CandidatoPersistenceEntityAssembler;
 import br.com.sgps.candidato.infrastructure.entity.CandidatoPersistenteEntity;
 import br.com.sgps.candidato.infrastructure.persistence.CandidatoPersistenceRepository;
+import br.com.sgps.domain.valueobject.Email;
+import br.com.sgps.candidato.infrastructure.assembler.CandidatoPersistenceEntityAssembler;
 import br.com.sgps.infrastructure.specification.CandidatoSpecification;
+import br.com.sgps.shared.paginacao.Pagina;
+import br.com.sgps.shared.paginacao.Paginacao;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-@Slf4j
-@Component
+@Repository
 @RequiredArgsConstructor
-public class CandidatoPersistenceProvider implements CandidatoRepositoryDomain {
+public class CandidatoRepositoryAdapter  implements CandidatoRepositoryPort {
 
     private final CandidatoPersistenceRepository candidatoPersistenceRepository;
     private final CandidatoPersistenceEntityAssembler assembleCandidado;
@@ -61,7 +59,7 @@ public class CandidatoPersistenceProvider implements CandidatoRepositoryDomain {
 
         candidatoPersistenceRepository.findById(candidatoId)
                 .ifPresentOrElse((candidadoEncontrado) ->
-                        alterar(candidato,candidadoEncontrado),
+                                alterar(candidato,candidadoEncontrado),
                         ()->salvar(candidato));
 
 
@@ -89,9 +87,6 @@ public class CandidatoPersistenceProvider implements CandidatoRepositoryDomain {
         candidatoPersistenteEntity = assembleCandidado.merge(candidatoPersistenteEntity,candidato);
         candidatoPersistenceRepository.saveAndFlush(candidatoPersistenteEntity);
     }
-
-
-
 
 
 
