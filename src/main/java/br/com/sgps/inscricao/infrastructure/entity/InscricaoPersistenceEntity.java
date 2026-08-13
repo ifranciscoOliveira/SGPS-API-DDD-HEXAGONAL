@@ -1,0 +1,46 @@
+package br.com.sgps.inscricao.infrastructure.entity;
+
+import br.com.sgps.candidato.infrastructure.entity.CandidatoPersistenteEntity;
+import br.com.sgps.shared.domain.enums.EtapasEnum;
+import br.com.sgps.shared.domain.enums.ResultadoInscricaoEnum;
+import br.com.sgps.vaga.infrastructure.entity.VagaPersistenceEntity;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
+import java.util.UUID;
+
+@Entity
+@Table(name = "inscricao")
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+public class InscricaoPersistenceEntity {
+
+    @Id
+    private UUID id;
+
+    @ManyToOne
+    @JoinColumn(name = "id_candidato", nullable = false)
+    private CandidatoPersistenteEntity candidato;
+
+    @ManyToOne
+    @JoinColumn(name = "id_vaga", nullable = false)
+    private VagaPersistenceEntity vaga;
+
+
+    @Column(name = "data_inscricao")
+    private LocalDateTime dataInscricao;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name ="etapa_atual")
+    private EtapasEnum etapaAtual;
+
+    @Column(name ="resultado")
+    @Enumerated(EnumType.STRING)
+    private ResultadoInscricaoEnum resultadoInscricao;
+}

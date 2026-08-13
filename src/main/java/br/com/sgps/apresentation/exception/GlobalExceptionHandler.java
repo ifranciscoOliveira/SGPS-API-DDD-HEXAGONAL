@@ -1,10 +1,10 @@
 package br.com.sgps.apresentation.exception;
 
 import br.com.sgps.candidato.domain.exception.CandidatoNaoEncontratoException;
-import br.com.sgps.domain.exception.DocumentoEmUsoException;
-import br.com.sgps.domain.exception.EmailEmUsoException;
+import br.com.sgps.shared.domain.exception.DocumentoEmUsoException;
+import br.com.sgps.shared.domain.exception.EmailEmUsoException;
 import br.com.sgps.vaga.domain.exception.InstituicaoNaoEncontradoException;
-import br.com.sgps.domain.exception.NegocioException;
+import br.com.sgps.shared.domain.exception.NegocioException;
 import br.com.sgps.vaga.domain.exception.VagaNaoEncontradaException;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.FieldError;

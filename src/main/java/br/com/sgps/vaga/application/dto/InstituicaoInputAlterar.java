@@ -1,7 +1,7 @@
 package br.com.sgps.vaga.application.dto;
 
-import br.com.sgps.domain.valueobject.Documento;
-import br.com.sgps.domain.valueobject.Email;
+import br.com.sgps.shared.domain.valueobject.Documento;
+import br.com.sgps.shared.domain.valueobject.Email;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

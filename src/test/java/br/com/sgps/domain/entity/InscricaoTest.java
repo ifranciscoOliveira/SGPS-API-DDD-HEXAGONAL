@@ -1,9 +1,10 @@
 package br.com.sgps.domain.entity;
 
-import br.com.sgps.domain.commons.EtapasEnum;
-import br.com.sgps.domain.commons.ResultadoInscricaoEnum;
-import br.com.sgps.domain.exception.NegocioException;
+import br.com.sgps.shared.domain.enums.EtapasEnum;
+import br.com.sgps.shared.domain.enums.ResultadoInscricaoEnum;
+import br.com.sgps.shared.domain.exception.NegocioException;
 import br.com.sgps.candidato.domain.valueobject.CandidatoId;
+import br.com.sgps.inscricao.domain.entity.Inscricao;
 import br.com.sgps.vaga.domain.valueobject.VagaId;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

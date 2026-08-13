@@ -1,7 +1,7 @@
 package br.com.sgps.vaga.application.usecase.instituicao;
 
-import br.com.sgps.domain.valueobject.Documento;
-import br.com.sgps.domain.valueobject.Email;
+import br.com.sgps.shared.domain.valueobject.Documento;
+import br.com.sgps.shared.domain.valueobject.Email;
 import br.com.sgps.vaga.application.dto.InstituicaoInput;
 import br.com.sgps.vaga.application.dto.InstituicaoOutPut;
 import br.com.sgps.vaga.application.port.in.instituicao.AtualizarInstituicaoUseCase;

@@ -2,8 +2,8 @@ package br.com.sgps.candidato.infrastructure.assembler;
 
 import br.com.sgps.candidato.domain.entity.Candidato;
 import br.com.sgps.candidato.domain.valueobject.CandidatoId;
-import br.com.sgps.domain.valueobject.Documento;
-import br.com.sgps.domain.valueobject.Email;
+import br.com.sgps.shared.domain.valueobject.Documento;
+import br.com.sgps.shared.domain.valueobject.Email;
 import br.com.sgps.candidato.infrastructure.entity.CandidatoPersistenteEntity;
 import org.springframework.stereotype.Component;
 

@@ -3,11 +3,11 @@ package br.com.sgps.vaga.domain.service;
 import br.com.sgps.shared.domain.annotation.DomainService;
 import br.com.sgps.vaga.application.port.out.InstituicaoRepositoryPort;
 import br.com.sgps.vaga.domain.entity.Instituicao;
-import br.com.sgps.domain.exception.DocumentoEmUsoException;
-import br.com.sgps.domain.exception.EmailEmUsoException;
+import br.com.sgps.shared.domain.exception.DocumentoEmUsoException;
+import br.com.sgps.shared.domain.exception.EmailEmUsoException;
 import br.com.sgps.vaga.domain.exception.InstituicaoNaoEncontradoException;
-import br.com.sgps.domain.valueobject.Documento;
-import br.com.sgps.domain.valueobject.Email;
+import br.com.sgps.shared.domain.valueobject.Documento;
+import br.com.sgps.shared.domain.valueobject.Email;
 import br.com.sgps.vaga.domain.valueobject.InstituicaoId;
 import lombok.RequiredArgsConstructor;
 

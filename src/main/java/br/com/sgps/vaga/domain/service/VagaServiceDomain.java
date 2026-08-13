@@ -4,7 +4,7 @@ import br.com.sgps.shared.domain.annotation.DomainService;
 import br.com.sgps.vaga.application.port.out.InstituicaoRepositoryPort;
 import br.com.sgps.vaga.application.port.out.VagaRepositoryPort;
 import br.com.sgps.vaga.domain.entity.Vaga;
-import br.com.sgps.domain.exception.NegocioException;
+import br.com.sgps.shared.domain.exception.NegocioException;
 import br.com.sgps.vaga.domain.exception.VagaNaoEncontradaException;
 import br.com.sgps.vaga.domain.valueobject.InstituicaoId;
 import br.com.sgps.vaga.domain.valueobject.VagaId;

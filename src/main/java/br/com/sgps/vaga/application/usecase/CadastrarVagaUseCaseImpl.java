@@ -1,18 +1,12 @@
 package br.com.sgps.vaga.application.usecase;
 
-import br.com.sgps.domain.exception.NegocioException;
 import br.com.sgps.vaga.application.dto.VagaInput;
 import br.com.sgps.vaga.application.dto.VagaOutPut;
 import br.com.sgps.vaga.application.port.in.CadastrarVagaUseCase;
-import br.com.sgps.vaga.application.port.out.InstituicaoRepositoryPort;
 import br.com.sgps.vaga.domain.service.VagaServiceDomain;
 import br.com.sgps.vaga.domain.valueobject.InstituicaoId;
 import jakarta.transaction.Transactional;
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-
-import java.util.Objects;
 
 @Service
 public class CadastrarVagaUseCaseImpl implements CadastrarVagaUseCase {

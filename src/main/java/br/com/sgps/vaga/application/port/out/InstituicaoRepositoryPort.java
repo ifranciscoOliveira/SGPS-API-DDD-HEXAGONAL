@@ -1,8 +1,8 @@
 package br.com.sgps.vaga.application.port.out;
 
 import br.com.sgps.vaga.application.filter.InstituicaoFiltro;
-import br.com.sgps.domain.valueobject.Documento;
-import br.com.sgps.domain.valueobject.Email;
+import br.com.sgps.shared.domain.valueobject.Documento;
+import br.com.sgps.shared.domain.valueobject.Email;
 import br.com.sgps.shared.paginacao.Pagina;
 import br.com.sgps.shared.paginacao.Paginacao;
 import br.com.sgps.vaga.domain.entity.Instituicao;

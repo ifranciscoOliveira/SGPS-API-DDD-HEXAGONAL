@@ -3,7 +3,7 @@ package br.com.sgps.candidato.application.port.out;
 import br.com.sgps.candidato.application.dto.CandidatoFiltro;
 import br.com.sgps.candidato.domain.entity.Candidato;
 import br.com.sgps.candidato.domain.valueobject.CandidatoId;
-import br.com.sgps.domain.valueobject.Email;
+import br.com.sgps.shared.domain.valueobject.Email;
 import br.com.sgps.shared.paginacao.Pagina;
 import br.com.sgps.shared.paginacao.Paginacao;
 
