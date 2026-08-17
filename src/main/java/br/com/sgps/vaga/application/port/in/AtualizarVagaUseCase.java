@@ -7,5 +7,5 @@ import java.util.UUID;
 
 public interface AtualizarVagaUseCase {
 
-    VagaOutPut alterar(UUID idu, VagaInput vagaInput);
+    VagaOutPut alterar(UUID id, VagaInput vagaInput);
 }
