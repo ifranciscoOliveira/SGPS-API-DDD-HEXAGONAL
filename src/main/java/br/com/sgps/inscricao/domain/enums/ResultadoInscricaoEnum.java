@@ -1,4 +1,4 @@
-package br.com.sgps.shared.domain.enums;
+package br.com.sgps.inscricao.domain.enums;
 
 public enum ResultadoInscricaoEnum {
     EM_AVALIACAO,

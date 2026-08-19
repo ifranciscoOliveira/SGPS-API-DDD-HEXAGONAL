@@ -1,4 +1,4 @@
-package br.com.sgps.shared.domain.enums;
+package br.com.sgps.inscricao.domain.enums;
 
 import lombok.Getter;
 

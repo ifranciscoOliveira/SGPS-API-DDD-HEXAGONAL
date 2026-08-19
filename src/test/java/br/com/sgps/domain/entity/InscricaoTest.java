@@ -1,7 +1,7 @@
 package br.com.sgps.domain.entity;
 
-import br.com.sgps.shared.domain.enums.EtapasEnum;
-import br.com.sgps.shared.domain.enums.ResultadoInscricaoEnum;
+import br.com.sgps.inscricao.domain.enums.EtapasEnum;
+import br.com.sgps.inscricao.domain.enums.ResultadoInscricaoEnum;
 import br.com.sgps.shared.domain.exception.NegocioException;
 import br.com.sgps.candidato.domain.valueobject.CandidatoId;
 import br.com.sgps.inscricao.domain.entity.Inscricao;

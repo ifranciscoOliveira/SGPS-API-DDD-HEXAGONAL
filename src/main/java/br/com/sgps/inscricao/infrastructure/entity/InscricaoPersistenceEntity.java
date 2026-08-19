@@ -1,8 +1,8 @@
 package br.com.sgps.inscricao.infrastructure.entity;
 
 import br.com.sgps.candidato.infrastructure.entity.CandidatoPersistenteEntity;
-import br.com.sgps.shared.domain.enums.EtapasEnum;
-import br.com.sgps.shared.domain.enums.ResultadoInscricaoEnum;
+import br.com.sgps.inscricao.domain.enums.EtapasEnum;
+import br.com.sgps.inscricao.domain.enums.ResultadoInscricaoEnum;
 import br.com.sgps.vaga.infrastructure.entity.VagaPersistenceEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
