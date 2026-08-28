@@ -1,6 +1,8 @@
 package br.com.sgps.vaga.domain.exception;
 
-public class InstituicaoNaoEncontradoException extends RuntimeException{
+import br.com.sgps.shared.domain.exception.RecursoNaoEncontradoException;
+
+public class InstituicaoNaoEncontradoException extends RecursoNaoEncontradoException {
 
     public InstituicaoNaoEncontradoException() {
     }

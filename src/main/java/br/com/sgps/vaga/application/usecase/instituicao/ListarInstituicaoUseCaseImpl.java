@@ -6,7 +6,9 @@ import br.com.sgps.vaga.application.dto.InstituicaoOutPut;
 import br.com.sgps.vaga.application.filter.InstituicaoFiltro;
 import br.com.sgps.vaga.application.port.in.instituicao.ListarInstituicaoUseCase;
 import br.com.sgps.vaga.application.port.out.InstituicaoRepositoryPort;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ListarInstituicaoUseCaseImpl implements ListarInstituicaoUseCase {
 
     private final InstituicaoRepositoryPort instituicaoRepositoryPort;

@@ -8,9 +8,11 @@ import br.com.sgps.candidato.domain.entity.Candidato;
 import br.com.sgps.candidato.domain.service.CandidatoServiceDomain;
 import br.com.sgps.candidato.domain.valueobject.CandidatoId;
 import br.com.sgps.shared.domain.valueobject.Email;
+import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
+@Service
 public class AtualizarCandidatoUseCase implements AtualizarCandidato {
 
     private final CandidatoServiceDomain candidatoServiceDomain;

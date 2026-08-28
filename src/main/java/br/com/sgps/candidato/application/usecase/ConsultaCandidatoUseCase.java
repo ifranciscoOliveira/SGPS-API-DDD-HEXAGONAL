@@ -7,9 +7,11 @@ import br.com.sgps.candidato.application.port.out.CandidatoRepositoryPort;
 import br.com.sgps.candidato.domain.valueobject.CandidatoId;
 import br.com.sgps.shared.paginacao.Pagina;
 import br.com.sgps.shared.paginacao.Paginacao;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class ConsultaCandidatoUseCase implements ConsultaCandidato {
 
     private final CandidatoRepositoryPort candidatoRepositoryPort;

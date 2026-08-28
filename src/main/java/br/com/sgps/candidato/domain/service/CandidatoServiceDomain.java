@@ -1,11 +1,11 @@
 package br.com.sgps.candidato.domain.service;
 
+import br.com.sgps.candidato.application.port.out.CandidatoRepositoryPort;
 import br.com.sgps.candidato.domain.entity.Candidato;
 import br.com.sgps.candidato.domain.exception.CandidatoNaoEncontratoException;
 import br.com.sgps.shared.domain.exception.DocumentoEmUsoException;
 import br.com.sgps.shared.domain.exception.EmailEmUsoException;
 import br.com.sgps.shared.domain.exception.NegocioException;
-import br.com.sgps.domain.repository.CandidatoRepositoryDomain;
 import br.com.sgps.candidato.domain.valueobject.CandidatoId;
 import br.com.sgps.shared.domain.valueobject.Documento;
 import br.com.sgps.shared.domain.valueobject.Email;
@@ -18,7 +18,7 @@ import java.time.LocalDate;
 @RequiredArgsConstructor
 public class CandidatoServiceDomain {
 
-    private  final CandidatoRepositoryDomain candidatoRepositoryDomain;
+    private  final CandidatoRepositoryPort candidatoRepositoryDomain;
 
     public Candidato salvar(Documento cpf, String nome,
                             Email email, String telefone, LocalDate dataNascimento) throws EmailEmUsoException, NegocioException {

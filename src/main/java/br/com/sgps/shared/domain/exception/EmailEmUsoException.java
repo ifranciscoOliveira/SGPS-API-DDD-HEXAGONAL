@@ -1,6 +1,6 @@
 package br.com.sgps.shared.domain.exception;
 
-public class EmailEmUsoException extends RuntimeException {
+public class EmailEmUsoException extends NegocioException {
 
     public EmailEmUsoException(){super();}
 
